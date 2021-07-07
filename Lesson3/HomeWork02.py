@@ -38,10 +38,11 @@ def requ():
 
 faker = Faker()
 @app.route('/generate-users/')
-def gen():
+@app.route('/generate-users/<int:count>')
+def gen(count=100):
     name = []
     email = []
-    for _ in range(100):
+    for _ in range(count):
         name.append(faker.name())
         email.append(faker.ascii_email())
     d = dict(zip(name, email))
