@@ -6,11 +6,6 @@ import csv
 from collections import deque
 import requests
  
-
-
-
-
-    
 app = Flask(__name__)
 
 
